@@ -9,6 +9,7 @@
     --main-font-colour: #000000;
     --heading-font:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     --third-heading-colour: rgba(7, 78, 0, 0.685);
+    --white: aliceblue;
 
 }
 
@@ -24,7 +25,7 @@ section {
 
 
 /* Home Page */
-.welcome{
+.welcome, .contact{
     height: 30%;
     display: flex;
     flex-direction: column;
@@ -101,13 +102,13 @@ section {
 .about-container{
     background-image: url(../../../public/photos/about_bkgd.jpg);
     background-size: cover;
-    color: white;
+    color: var(--white);
 }
 
 .intro-about{
     position: relative;
-    width: 30%;
-    border: 2px inset white;
+    width: 50%;
+    border: 2px inset var(--white);
     padding: 30px;
     border-radius: 30px;
     font-size: 1.5rem;
@@ -131,9 +132,12 @@ section {
     align-items: center;
     column-gap: 200px;
     width: 100%;
+}
+
+.animate-about{
     animation-name: showAbout;
-    animation-duration: 4s;
-    animation-iteration-count: 1;
+        animation-duration: 2s;
+        animation-iteration-count: 1;
 }
 
 .brains:hover{
@@ -141,4 +145,102 @@ section {
     animation-duration: 10s;
     animation-iteration-count: infinite;
 }
+/* 
+.about-video{
+    position: absolute;
+    width: 100%;
+    height: 100%;
 
+} */
+
+
+
+/* Projects */
+.projects{
+    font-size: 2rem;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.project-container{
+    display: inline-block;
+    width: 350px;
+    padding: 20px;
+    border: 2px outset var(--white);
+    margin-left: 50px;
+    margin-bottom: 50px;
+    border-radius: 50px;
+    background: var(--white);
+    box-shadow: 10px 5px 20px rgba(0, 0, 0, 0.473);
+}
+
+.projects-container{
+    height: max-content;
+}
+    
+.project-image{
+    min-width: 100%;
+    min-height: 300px; 
+}
+
+.project-image:hover{
+    transform:translateY(10) ;
+    cursor: pointer;
+}
+
+.project-description{
+    padding: 20px;
+}
+
+/* Contact */
+.contact-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.contact-info{
+    padding: 20px;
+    font-size: 2rem;
+    list-style-type: none;
+    color: var(--main-font-colour);
+}
+
+.location, .email{
+    padding: 0 20px;
+    color: var(--third-heading-colour);
+}
+
+.email-link{
+    text-decoration: none;
+    color: var(--main-font-colour);
+}
+
+.copyright-container{
+    background-color: var(--main-font-colour);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    height: 10vh;
+}
+
+.social-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.social-container li{
+    list-style-type: none;
+    padding: 50px;
+}
+
+.social-links{
+    color: var(--main-font-colour);
+    font-size: 4rem;
+}
