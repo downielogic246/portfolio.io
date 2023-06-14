@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --main-background-colour: linear-gradient(153deg, rgba(255, 255, 255, 1) 0%, rgba(255, 242, 190, 1) 31%, rgba(255, 230, 128, 1) 66%);
+    --main-font-colour: #000000;
+    --heading-font:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    --third-heading-colour: rgba(7, 78, 0, 0.685);
+
+}
+
+.heading{
+    font-family: var(--heading-font);
+    text-transform: capitalize;
+    font-size: 4rem;
+}
+
+section {
+    height: 100vh;
+}
+
+
+/* Home Page */
+.welcome{
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 50px 0;
+    height: 60%;
+}
+
+.marlon{
+    border-radius: 20px;
+    width: 400px;
+    height: 400px;
+}
+
+.brief-container{
+    width: 50%;
+    padding:80px;
+    border-left: 5px solid var(--main-font-colour);
+    margin-left: 10px;
+}
+
+.sub-heading{
+    text-transform: capitalize;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+}
+
+.career, .name{
+    padding: 10px 0;
+}
+
+.third-heading{
+    text-transform: capitalize;
+    font-size: 1.2rem;
+    letter-spacing: 1.5px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color: var(--third-heading-colour)
+}
+
+/* About Section */
+
+@keyframes brainSpinning{
+    from {rotate: 0deg;}
+    to {rotate: 360deg;}
+}
+
+@keyframes showAbout{
+    0%{
+        translate: 0 50px;
+    }
+
+    100%{
+        translate: 0 0;
+    }
+}
+
+.about{
+    font-size: 2rem;
+    padding: 10px;
+    text-align: center;
+}
+
+.about-container{
+    background-image: url(../../../public/photos/about_bkgd.jpg);
+    background-size: cover;
+    color: white;
+}
+
+.intro-about{
+    position: relative;
+    width: 30%;
+    border: 2px inset white;
+    padding: 30px;
+    border-radius: 30px;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    word-spacing: 1.5px;
+}
+
+.brains-container{
+    position: relative;
+    width: max-content;
+    /* left: 60%;
+    top: -5%; */
+}
+
+.about-container > div{
+    position: relative;
+    top: 20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: 200px;
+    width: 100%;
+    animation-name: showAbout;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+}
+
+.brains:hover{
+    animation-name: brainSpinning;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
