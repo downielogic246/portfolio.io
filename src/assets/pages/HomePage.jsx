@@ -12,6 +12,12 @@ const HomePage = () => {
     );
   });
 
+  const changeLocation = (location) => {
+    let newURL = window.location.origin + location;
+
+    window.open(newURL, "_blank");
+  };
+
   return (
     <>
       <section>
@@ -59,11 +65,7 @@ const HomePage = () => {
             everyday is day of seeing code.
           </article>
           <div className="brains-container">
-            <img
-              src="../../../public/photos/brains.png"
-              alt=""
-              className="brains"
-            />
+            <img src="/photos/brains.png" alt="" className="brains" />
           </div>
         </div>
       </section>
@@ -73,7 +75,7 @@ const HomePage = () => {
         <div className="project-container">
           {/* <img src="" alt="project Image" className="project-image" /> */}
           <video
-            src="../../../public/mp4/FIRST VIDOE EDIT.mp4"
+            src="/mp4/hubb_central.mp4"
             className="project-image"
             width="100%"
             type="video/mp4"
@@ -88,11 +90,17 @@ const HomePage = () => {
             non, omnis repellat nesciunt illo minus quo cupiditate sapiente
             delectus fugiat!
           </p>
+          <button
+            className="visit"
+            onClick={() => changeLocation("/hubbcentralservicesinc.github.io/")}
+          >
+            Visit site
+          </button>
         </div>
         <div className="project-container">
           {/* <img src="" alt="project Image" className="project-image" /> */}
           <video
-            src="../../../public/mp4/FIRST VIDOE EDIT.mp4"
+            src="/mp4/chaunies.mp4"
             className="project-image"
             width="100%"
             type="video/mp4"
@@ -107,6 +115,12 @@ const HomePage = () => {
             non, omnis repellat nesciunt illo minus quo cupiditate sapiente
             delectus fugiat!
           </p>
+          <button
+            className="visit"
+            onClick={() => changeLocation("/chaunies.io/")}
+          >
+            Visit site
+          </button>
         </div>
       </section>
 
