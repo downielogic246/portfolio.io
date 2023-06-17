@@ -33,6 +33,12 @@ const HomePage = () => {
               I'm Marlon Downie. A student driven by the passion for web design
               and graphic design based in Barbados.
             </article>
+            <div className="tech-stack">
+              <i class="fa-brands fa-react"></i>
+              <i class="fa-brands fa-square-js"></i>
+              <i class="fa-brands fa-html5"></i>
+              <i class="fa-brands fa-css3-alt"></i>
+            </div>
           </div>
         </div>
       </section>
