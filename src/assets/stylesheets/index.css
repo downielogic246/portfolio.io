@@ -43,6 +43,9 @@ section {
 }
 
 .marlon{
+    background-image: url(/photos/marlon.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
     border-radius: 20px;
     width: 400px;
     height: 400px;
@@ -100,7 +103,7 @@ section {
 }
 
 .about-container{
-    background-image: url(../../../public/photos/about_bkgd.jpg);
+    background-image: url(/photos/about_bkgd.jpg);
     background-size: cover;
     color: var(--white);
 }
@@ -116,12 +119,7 @@ section {
     word-spacing: 1.5px;
 }
 
-.brains-container{
-    position: relative;
-    width: max-content;
-    /* left: 60%;
-    top: -5%; */
-}
+
 
 .about-container > div{
     position: relative;
@@ -140,11 +138,6 @@ section {
         animation-iteration-count: 1;
 }
 
-.brains:hover{
-    animation-name: brainSpinning;
-    animation-duration: 10s;
-    animation-iteration-count: infinite;
-}
 /* 
 .about-video{
     position: absolute;

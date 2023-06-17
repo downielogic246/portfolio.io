@@ -4,13 +4,7 @@ import "../stylesheets/Layout.css";
 const Layout = () => {
   return (
     <>
-      <div className="image-logo">
-        <img
-          src="../../../public/photos/DL_logo_only.png"
-          alt="downielogic"
-          className="logo"
-        />
-      </div>
+      <div title="downielogic" id="logo"></div>
       <nav>
         <ul className="nav-links">
           <li>

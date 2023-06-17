@@ -23,11 +23,7 @@ const HomePage = () => {
       <section>
         <h1 className="heading welcome">welcome to my portfolio</h1>
         <div className="intro-container">
-          <img
-            src="../../../public/photos/marlon.jpeg"
-            alt="marlon"
-            className="marlon"
-          />
+          <div title="marlon" className="marlon"></div>
           <div className="brief-container">
             <h2 className="sub-heading career">
               Front-End Developer/Web Designer
@@ -64,9 +60,6 @@ const HomePage = () => {
             programming became more than a subject, it became a lifestyle where
             everyday is day of seeing code.
           </article>
-          <div className="brains-container">
-            <img src="/photos/brains.png" alt="" className="brains" />
-          </div>
         </div>
       </section>
 

@@ -1,16 +1,17 @@
 /* Layout */
-.image-logo {
-    width: max-content;
-    height: max-content;
-    position: absolute;
-    top: 0;
-    left: 15px;
-}
 
-.logo{
-    max-width: 200px;
-    max-height: 75px;
-}
+
+#logo{
+    background-image: url(/photos/DL_logo_only.png);
+    background-size: cover;
+    width: 150px;
+    height: 80px;
+    background-repeat: no-repeat;
+    /* max-height: 75px; */
+    position: relative;
+        top: 0;
+        left: 15px;
+    }
 
 .nav-links {
     background: transparent;
