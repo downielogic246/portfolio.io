@@ -1,5 +1,4 @@
 import React, { useRef, useState } from "react";
-import Layout from "../components/Layout";
 
 const HomePage = () => {
   const aboutHeadingRef = useRef();
@@ -112,10 +111,6 @@ const HomePage = () => {
           </button>
         </div>
       </section>
-
-      <footer className="copyright-container">
-        <p>Copyright &copy;2023. All rights are reserved.</p>
-      </footer>
     </>
   );
 };
