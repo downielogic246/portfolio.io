@@ -67,22 +67,18 @@ const HomePage = () => {
         <h1 className="heading projects">Projects</h1>
         <div className="project-container">
           {/* <img src="" alt="project Image" className="project-image" /> */}
-          <video
-            src="/mp4/hubb_central.mp4"
-            className="project-image"
-            width="100%"
-            type="video/mp4"
-            autoPlay
-            muted
-            loop
-          >
-            Video not supported
-          </video>
+          <div className="project-image chaunie"></div>
+
           <p className="project-description">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere
-            non, omnis repellat nesciunt illo minus quo cupiditate sapiente
-            delectus fugiat!
+            This website was my first complete react project. Examples of hooks
+            that were used are BrowserRouter, Link, useState and useRef.
           </p>
+          <div className="tech-stack">
+            <i class="fa-brands fa-react"></i>
+            <i class="fa-brands fa-square-js"></i>
+            <i class="fa-brands fa-html5"></i>
+            <i class="fa-brands fa-css3-alt"></i>
+          </div>
           <button
             className="visit"
             onClick={() => changeLocation("/hubbcentralservicesinc.github.io/")}
@@ -92,22 +88,16 @@ const HomePage = () => {
         </div>
         <div className="project-container">
           {/* <img src="" alt="project Image" className="project-image" /> */}
-          <video
-            src="https://mardanca.github.io/portfolio.io/public/mp4/chaunies.mp4"
-            className="project-image"
-            width="100%"
-            type="video/mp4"
-            autoPlay
-            muted
-            loop
-          >
-            Video not supported
-          </video>
+          <div className="project-image hubb"></div>
           <p className="project-description">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere
-            non, omnis repellat nesciunt illo minus quo cupiditate sapiente
-            delectus fugiat!
-          </p>
+            This website was my first major project. Within this website, I only
+            utilized vanilla javascript, as well as HTML and CSS.
+          </p>{" "}
+          <div className="tech-stack">
+            <i class="fa-brands fa-square-js"></i>
+            <i class="fa-brands fa-html5"></i>
+            <i class="fa-brands fa-css3-alt"></i>
+          </div>
           <button
             className="visit"
             onClick={() => changeLocation("/chaunies.io/")}
