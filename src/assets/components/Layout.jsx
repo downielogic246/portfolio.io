@@ -14,19 +14,18 @@ const Layout = () => {
       <nav>
         <ul className="nav-links">
           <li>
-            <Link className="links" to="/">
+            <Link className="links" to="/portfolio.io/">
               Home
             </Link>
           </li>
           <li>
-            <Link className="links" to="/contact">
+            <Link className="links" to="/portfolio.io/contact">
               Contact
             </Link>
           </li>
         </ul>
+        <Outlet />
       </nav>
-
-      <Outlet />
     </>
   );
 };

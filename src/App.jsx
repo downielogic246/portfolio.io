@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Layout from "./assets/components/Layout";
 import HomePage from "./assets/pages/HomePage";
 import ContactMe from "./assets/pages/ContactMe";
@@ -7,15 +7,12 @@ import ContactMe from "./assets/pages/ContactMe";
 const App = () => {
   return (
     <>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Layout />}>
-            <Route index element={<HomePage />} />
-            <Route path="contact" element={<ContactMe />} />
-            {/* <Route path="*" element={<NoPage />} /> */}
-          </Route>
-        </Routes>
-      </BrowserRouter>
+      <Layout />
+      <Routes>
+        <Route path="/portfolio.io/" element={<HomePage />} />
+        <Route path="/portfolio.io/contact" element={<ContactMe />} />
+        {/* <Route path="*" element={<NoPage />} /> */}
+      </Routes>
     </>
   );
 };
