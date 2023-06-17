@@ -87,7 +87,7 @@ const HomePage = () => {
           </div>
           <button
             className="visit"
-            onClick={() => changeLocation("/hubbcentralservicesinc.github.io/")}
+            onClick={() => changeLocation("/chaunies.io/")}
           >
             Visit site
           </button>
@@ -106,7 +106,7 @@ const HomePage = () => {
           </div>
           <button
             className="visit"
-            onClick={() => changeLocation("/chaunies.io/")}
+            onClick={() => changeLocation("/hubbcentralservicesinc.github.io/")}
           >
             Visit site
           </button>
