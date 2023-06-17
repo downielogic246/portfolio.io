@@ -68,7 +68,7 @@ const HomePage = () => {
         <div className="project-container">
           {/* <img src="" alt="project Image" className="project-image" /> */}
           <video
-            src="/mp4/hubb_central.mp4"
+            src="/dist/mp4/hubb_central.mp4"
             className="project-image"
             width="100%"
             type="video/mp4"
@@ -93,7 +93,7 @@ const HomePage = () => {
         <div className="project-container">
           {/* <img src="" alt="project Image" className="project-image" /> */}
           <video
-            src="/mp4/chaunies.mp4"
+            src="/dist/mp4/chaunies.mp4"
             className="project-image"
             width="100%"
             type="video/mp4"
