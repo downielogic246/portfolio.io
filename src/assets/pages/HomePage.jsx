@@ -7,7 +7,7 @@ const projects = [
     description:
       "This website was my first major project. Within this website, only utilized Vanilla Javascript, as well as HTML and CSS.",
     techStack: ["square-js", "html5", "css3-alt"],
-    pathLocation: "/chaunies.io/",
+    pathLocation: "/hubbcentralservicesinc.github.io/",
   },
   {
     id: "chaunie",
@@ -15,7 +15,7 @@ const projects = [
     description:
       "This website was my first complete react project. Examples of hooks that were used are useState and useRef.",
     techStack: ["react", "square-js", "html5", "css3-alt"],
-    pathLocation: "/hubbcentralservicesinc.github.io/",
+    pathLocation: "/chaunies.io/",
   },
 ];
 
