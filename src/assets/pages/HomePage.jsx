@@ -1,5 +1,24 @@
 import React, { useRef, useState } from "react";
 
+const projects = [
+  {
+    id: "hubb",
+    name: "Hubb Central Services Inc.",
+    description:
+      "This website was my first major project. Within this website, only utilized Vanilla Javascript, as well as HTML and CSS.",
+    techStack: ["square-js", "html5", "css3-alt"],
+    pathLocation: "/chaunies.io/",
+  },
+  {
+    id: "chaunie",
+    name: "Chaunie's",
+    description:
+      "This website was my first complete react project. Examples of hooks that were used are useState and useRef.",
+    techStack: ["react", "square-js", "html5", "css3-alt"],
+    pathLocation: "/hubbcentralservicesinc.github.io/",
+  },
+];
+
 const HomePage = () => {
   const aboutHeadingRef = useRef();
 
@@ -25,7 +44,7 @@ const HomePage = () => {
           <div title="marlon" className="marlon"></div>
           <div className="brief-container">
             <h2 className="sub-heading career">
-              Front-End Developer/Web Designer
+              Front-End Developer | Web Designer
             </h2>
             <h3 className="third-heading name">Marlon Downie</h3>
             <article className="intro-brief">
@@ -33,10 +52,11 @@ const HomePage = () => {
               and graphic design based in Barbados.
             </article>
             <div className="tech-stack">
-              <i class="fa-brands fa-react"></i>
-              <i class="fa-brands fa-square-js"></i>
-              <i class="fa-brands fa-html5"></i>
-              <i class="fa-brands fa-css3-alt"></i>
+              <i className="fa-brands fa-react"></i>
+              <i className="fa-brands fa-square-js"></i>
+              <i className="fa-brands fa-html5"></i>
+              <i className="fa-brands fa-css3-alt"></i>
+              <i className="fa-brands fa-bootstrap"></i>
             </div>
           </div>
         </div>
@@ -70,45 +90,71 @@ const HomePage = () => {
 
       <section className="projects-container">
         <h1 className="heading projects">Projects</h1>
-        <div className="project-container">
-          {/* <img src="" alt="project Image" className="project-image" /> */}
-          <div className="project-image chaunie"></div>
-
-          <p className="project-description">
-            This website was my first complete react project. Examples of hooks
-            that were used are BrowserRouter, Link, useState and useRef.
-          </p>
-          <div className="tech-stack">
-            <i class="fa-brands fa-react"></i>
-            <i class="fa-brands fa-square-js"></i>
-            <i class="fa-brands fa-html5"></i>
-            <i class="fa-brands fa-css3-alt"></i>
+        {projects.map((project) => {
+          return (
+            <div className="project-container">
+              <div className={"project-image " + project.id}>
+                {project.name}
+              </div>
+              <p className="project-description">{project.description}</p>
+              <div className="tech-stack">
+                {project.techStack.map((language) => {
+                  return <i className={"fa-brands fa-" + language}></i>;
+                })}
+              </div>
+              <button
+                className="visit"
+                onClick={() => changeLocation(project.pathLocation)}
+              >
+                Visit site
+              </button>
+            </div>
+          );
+        })}
+        <div className="small-pcontainer">
+          <div class="accordion accordion-flush" id="accordionFlushExample">
+            {projects.map((project) => {
+              return (
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target={"#" + project.id}
+                      aria-expanded="false"
+                      aria-controls={project.id}
+                    >
+                      {project.name}
+                    </button>
+                  </h2>
+                  <div
+                    id={project.id}
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#accordionFlushExample"
+                  >
+                    <div className="accordion-body">
+                      <div className={"project-image " + project.id}></div>
+                      <p className="project-description">
+                        {project.description}
+                      </p>
+                      <div className="tech-stack">
+                        {project.techStack.map((language) => {
+                          return <i className={"fa-brands fa-" + language}></i>;
+                        })}
+                      </div>
+                      <button
+                        className="visit"
+                        onClick={() => changeLocation(project.pathLocation)}
+                      >
+                        Visit site
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
           </div>
-          <button
-            className="visit"
-            onClick={() => changeLocation("/chaunies.io/")}
-          >
-            Visit site
-          </button>
-        </div>
-        <div className="project-container">
-          {/* <img src="" alt="project Image" className="project-image" /> */}
-          <div className="project-image hubb"></div>
-          <p className="project-description">
-            This website was my first major project. Within this website, I only
-            utilized vanilla javascript, as well as HTML and CSS.
-          </p>{" "}
-          <div className="tech-stack">
-            <i class="fa-brands fa-square-js"></i>
-            <i class="fa-brands fa-html5"></i>
-            <i class="fa-brands fa-css3-alt"></i>
-          </div>
-          <button
-            className="visit"
-            onClick={() => changeLocation("/hubbcentralservicesinc.github.io/")}
-          >
-            Visit site
-          </button>
         </div>
       </section>
     </>

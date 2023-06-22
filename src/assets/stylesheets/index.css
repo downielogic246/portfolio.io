@@ -20,13 +20,14 @@
 }
 
 section {
-    height: 100vh;
+    height: max-content;
 }
 
 
 /* Home Page */
 .welcome, .contact{
-    height: 30%;
+    height: max-content;
+    padding: 20px 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -39,7 +40,7 @@ section {
     align-items: center;
     width: 100%;
     padding: 50px 0;
-    height: 60%;
+    height: 600px;
 }
 
 .marlon{
@@ -106,6 +107,12 @@ section {
     background-image: url(/photos/about_bkgd.jpg);
     background-size: cover;
     color: var(--white);
+    height: 100vh;
+}
+
+.intro-brief{
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .intro-about{
@@ -199,7 +206,6 @@ section {
 }
 
 .project-image:hover{
-    transform:translateY(10) ;
     cursor: pointer;
 }
 
@@ -301,4 +307,178 @@ section {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
     background: #555;
+}
+
+.fa-react:before{
+    animation: reactBlue 2s ease-in 2s infinite alternate;
+}
+
+.fa-square-js:before{
+    animation: jsYellow 2s ease-in 3s infinite alternate;
+}
+
+.fa-html5:before{
+    animation: htmlOrange 2s ease-in 4s infinite alternate;
+}
+
+.fa-css3-alt:before{
+    animation: cssBlue 2s ease-in 5s infinite alternate;
+}
+.fa-bootstrap:before{
+    animation: bootstrapPurple 2s ease-in 6s infinite alternate;
+}
+
+.small-pcontainer{
+    grid-area: pro;
+    display: none;
+}
+
+.accordion-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    padding-bottom: 10px;
+}
+
+@keyframes reactBlue {
+    to{
+        color: #61DBFB;
+    }
+}
+
+@keyframes jsYellow {
+    to{
+        color: #F0DB4F;
+    }
+}
+@keyframes htmlOrange {
+    to{
+        color: #FFA500;
+    }
+}
+@keyframes cssBlue {
+    to{
+        color: #264de4;
+    }
+}
+
+@keyframes bootstrapPurple {
+    to {
+        color: #97457f;
+    }
+}
+
+@media (max-width: 1393px){
+    .project-container{
+        display: none;
+    }
+
+    .projects-container{
+        grid-template-columns: 200px 200px 200px;
+    }
+
+    .small-pcontainer{
+        display: block;
+        width: 100%;
+        height: 700px;
+    }
+
+    .project-image{
+        width: 100%;
+        background-size: cover;
+        height: 310px;
+    }
+}
+
+@media (max-width: 1002px){
+    .brief-container{
+        padding: 30px;
+    }
+    .intro-about{
+        width: 80%
+    }
+}
+
+@media (max-width: 952px){
+
+    .marlon{
+        width: 300px;
+        height: 300px;
+    }
+    .heading{
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 752px){
+    .intro-container{
+        width: 100%;
+        flex-direction: column;
+        height: max-content;
+        row-gap: 20px;
+    }
+        .marlon {
+            width: 400px;
+            height: 400px;
+        }
+        .brief-container{
+            border: 0;
+            width: 90%;
+        }
+}
+
+@media (max-width: 682px){
+    .projects-container {
+            grid-template-columns: 100px 100px 100px;
+        }
+.project-image {
+    width: 100%;
+    background-size: contain;
+    height: 175px;
+}
+}
+
+@media (max-width: 592px){
+    .heading{
+        font-size: 2rem;
+    }
+    .intro-about{
+        width: 95%;
+    }
+}
+
+@media (max-width :462px){
+    .marlon {
+            width: 250px;
+            height: 250px;
+        }
+    
+        .heading {
+            font-size: 1.5rem;
+        }
+
+        .sub-heading{
+            font-size: 1rem;
+        }
+}
+
+@media(max-width:350px){
+        .projects-container {
+                grid-template-columns: 80px 80px 80px;
+            }
+        
+            .project-image {
+                width: 100%;
+                background-size: contain;
+                height: 150px;
+            }
+}
+
+@media (max-height: 841px){
+    .about-container{
+        height: max-content;
+        padding-bottom: 20px;
+    }
 }
