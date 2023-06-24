@@ -145,15 +145,6 @@ section {
         animation-iteration-count: 1;
 }
 
-/* 
-.about-video{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-
-} */
-
-
 
 /* Projects */
 .projects{
@@ -447,6 +438,18 @@ section {
     .intro-about{
         width: 95%;
     }
+
+    .contact-container li, .contact-container li a{
+        font-size: 25px;
+    }
+
+    .social-container li{
+        padding: 50px 20px;
+    }
+
+    .social-links{
+        font-size: 3rem;
+    }
 }
 
 @media (max-width :462px){
@@ -461,6 +464,21 @@ section {
 
         .sub-heading{
             font-size: 1rem;
+        }
+                .contact-container li,
+                .contact-container li a {
+                    font-size: 20px;
+                }
+        
+}
+
+@media (max-width: 361px){
+    .contact-container li,
+        .contact-container li a {
+            font-size: 15px;
+        }
+        .copyright-container p{
+            font-size: 15px;
         }
 }
 
@@ -481,4 +499,11 @@ section {
         height: max-content;
         padding-bottom: 20px;
     }
+}
+
+@media (min-height: 500px) {
+    #contact{
+        height: 100vh
+    }
+    
 }

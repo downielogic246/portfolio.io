@@ -3,11 +3,11 @@ import React from "react";
 const ContactMe = () => {
   return (
     <>
-      <section>
+      <section id="contact">
         <h1 className="heading contact">Contact</h1>
         <div className="contact-container">
           <li className="contact-info">
-            <i class="fa-solid fa-map-pin"></i>
+            <i className="fa-solid fa-map-pin"></i>
             <span className="location"> Bridgetown, Barbados</span>
           </li>
           <li className="contact-info">
@@ -15,7 +15,7 @@ const ContactMe = () => {
               className="email-link"
               href="mailto:downielogic@gmail.com?subject=Quick Question"
             >
-              <i class="fa-solid fa-inbox"></i>
+              <i className="fa-solid fa-inbox"></i>
               <span className="email">downielogic@gmail.com</span>
             </a>
           </li>
@@ -27,7 +27,7 @@ const ContactMe = () => {
               target="_blank"
               className="social-links"
             >
-              <i class="fa-brands fa-github"></i>
+              <i className="fa-brands fa-github"></i>
             </a>
           </li>
           <li>
@@ -36,7 +36,7 @@ const ContactMe = () => {
               target="_blank"
               className="social-links"
             >
-              <i class="fa-brands fa-linkedin"></i>
+              <i className="fa-brands fa-linkedin"></i>
             </a>
           </li>
           <li>
